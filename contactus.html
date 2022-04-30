@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+.details{
+    background-color: white;
+    padding-top: 20px;
+    padding-left: 30px;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    color: black;
+}
+.details h3{
+    font-family: 'Times New Roman';
+    padding-bottom: 10px;
+}
+.details p{
+    font-family: 'Times New Roman';
+    padding-bottom: 10px;
+}
+
+label{
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: .5em;
+}
+.details input{
+    width: 70%;
+    height: 40px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #185a80;
+    background: transparent;
+    color: black;
+}
+/* .details input:focus{
+    border: 1px solid white;
+    outline: 0;
+} */
+input, textarea{
+    width: 70%;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #185a80;
+    background: transparent;
+    color: black;
+    font-size: medium;
+}
+
+
+
+input[type="submit"]{
+    border: 0;
+    padding: 10px 30px;
+    background: #045c69;
+    font-size: 18px;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 30px;
+    width: 20%;
+}
+input[type="submit"]:hover {
+    background-color: #718a8e;
+}
+
+.socia-link img{
+    height: 25px;
+    margin: 20px;
+    cursor: pointer;
+   }
+   .socia-link{
+       text-align: center;
+       background-color: rgba(1, 1, 19, 0.973);
+       color: white;
+       margin-top: 20px;
+   }
+   .socia-link h5, a{
+       padding-top: 20px;
+       text-decoration: none;
+       color: white;
+   }
+
+
+@media only screen and (max-width:700px){
+
+.details input{
+    width: 80%;
+    height: 40px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #185a80;
+    background: transparent;
+    color: black;
+}
+/* .details input:focus{
+    border: 1px solid white;
+    outline: 0;
+} */
+input, textarea{
+    width: 80%;
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #185a80;
+    background: transparent;
+    color: black;
+}
+
+    input[type="submit"]{
+    border: 0;
+    padding: 10px 30px;
+    background: #045c69;
+    font-size: 18px;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 30px;
+    width: 50%;
+    }
+    input[type="submit"]:hover {
+    background-color: #718a8e;
+}
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html"><img src="images/LOGO.jpg" class="logo"></a>
+
+            <h2 class="title1">ABAH EMMA <span>NUEL</span></h2>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="sermon.html">SERMONS</a></li>
+                    <li><a href="e-books.html">E-BOOks</a></li>
+                    <li><a href="biograpy.html">BIOGRAPHY</a></li>
+                    <li><a href="contactus.html">CONTACT-US</a></li>
+                </ul>
+                <h2></h2>
+            </nav>
+            <img src="images/meni-icon.jpg" class="menu-icon" onclick="togglemenu()">
+        </div>
+
+        <div class="heading">
+            <hr color="darkred" size="5">
+            <h2>ABAH EMMA <span>NUEL</span> </h2>
+        </div>
+
+
+
+
+
+
+        <div class="details">
+            <h3>LOCATION</h3>
+            <p>Otada, Adoka, Benue State</p>
+            <h3>EMAIL</h3>
+            <P>abahfortune3@gmail.com</P>
+            <h3>PHONE(Call/WhatsApp)</h3>
+            <P>+2349063430166</P>
+            
+            <form method="get" action="mailto:victorugwu7@gmail.com">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" required>
+
+                <label for="Number">Mobile Number</label>
+                <input type="number" required>
+
+               <label for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
+
+                <input type="submit" class="send-message-cta" value="send message">
+            </form>
+        </div>
+
+
+        <div class="socia-link"> 
+            <h5>Follow Us On</h5>
+            <a href="https://www.facebook.com/abah.emmanuel.7946281"><img src="images/facebook.jpg"></a>
+            <a href="https://www.instagram.com/invites/contact/?i=1rybtbqpz1vjk&utm_content=h8splz9"><img src="images/instagram.jpg"></a>
+            <a href="https://t.me/abahNuel"><img src="images/telegram.png"></a>
+            <a href="https://youtube.com/channel/UCsFHk2cdEkkt-XPu147pTIA"><img src="images/real2-youtube.png"></a>
+        </div>
+
+
+
+
+
+
+<script>
+     var menuList = document.getElementById("menuList");
+
+menuList.style.maxHeight = "0px";
+
+function togglemenu(){
+    if( menuList.style.maxHeight == "0px")
+        {
+            menuList.style.maxHeight = "170px";
+        }
+    else    
+        {
+            menuList.style.maxHeight = "0px";
+        }
+}
+</script>
+
+
+
+</body>
+</html>

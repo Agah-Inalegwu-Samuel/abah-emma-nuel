@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming website page</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    #more{
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+          <a href="index.html"><img src="images/LOGO.jpg" class="logo"></a>
+
+            <h2 class="title1">ABAH EMMA <span>NUEL</span></h2>
+            <nav>
+                <ul id="menuList">
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="sermon.html">SERMONS</a></li>
+                    <li><a href="e-books.html">E-BOOks</a></li>
+                    <li><a href="biograpy.html">BIOGRAPHY</a></li>
+                    <li><a href="contactus.html">CONTACT-US</a></li>
+                </ul>
+                <h2></h2>
+            </nav>
+            <img src="images/meni-icon.jpg" class="menu-icon" onclick="togglemenu()">
+        </div>
+
+        <div class="heading">
+            <hr color="darkred" size="5">
+            <h2>ABAH EMMA <span>NUEL</span> </h2>
+        </div>
+
+        <div >
+            <img src="images/fiesta.jpg" class="wallpaper">
+        </div>
+
+        <div class="part1">
+            <hr color="darkred" size="5">
+            <h3><strong>THE POWER OF HIS WORD</strong></h3>
+            <h5>For the word of God is quick, and powerful, and sharper than any two edged sword...(Hebrews 4:12)</h5>
+        </div>
+
+        
+<div class="slideshow-container fade">
+
+    <div class="Containers">
+      <div class="MessageInfo">1 / 3</div>
+      <div class="img"><img src="images/QUOTE.jpg"></div>
+      <div class="text"><h5></h5></div>
+    </div>
+  
+    <div class="Containers">
+      <div class="MessageInfo">2 / 3</div>
+      <div class="img"><img src="images/B-QUOTE.jpg"></div>
+      <div class="text"><h5></h5></div>
+    </div>
+  
+    <div class="Containers">
+      <div class="MessageInfo">3 / 3</div>
+      <div class="img"><img src="images/CALM.jpg"></div>
+      <div class="text"><h5></h5></div>
+    </div>
+
+    <div class="Containers">
+      <div class="MessageInfo">3 / 3</div>
+      <div class="img"><img src="images/PIX-QUOTE.jpg"></div>
+      <div class="text"><h5></h5></div>
+    </div>
+    
+    <div class="Containers">
+      <div class="MessageInfo">3 / 3</div>
+      <div class="img"><img src="images/semi-quoth.jpg"></div>
+      <div class="text"><h5></h5></div>
+    </div>
+  
+    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="" onclick="currentSlide(1)"></span>
+    <span class="" onclick="currentSlide(2)"></span>
+    <span class="" onclick="currentSlide(3)"></span>
+  </div> 
+            
+    
+  <div class="try">
+    <div class="word">
+        <hr color="#c47208" size="5">
+        <h2>THE POWER IN HIS WORD</h3>
+        <h5>He sent His WORD, and healed them, and deliverd them from their destruction. (PSALM 107:20)</h5>
+    </div>
+
+    <div class="let">
+        <a href="contactus.html"><button type="button" class="btn"><span></span>LETS GET IN TOUCH</button></a>
+    </div>
+  </div>
+
+    <div class="poem" id="poem">
+        <hr color="darkred" size="5">
+        <h2>UNDERCOVER</h2>
+        <h5>We are meek on Sundays. <br> wild on week days <br> Good at being sisters. <br> But are secret acts are sinister <br> We do what the church says. <br> At day we condemn sin. <span id="dots">...</span><span id="more"> <br> At night we're cought right at the scene. <br> We speak in tongues. <br> Our spiritual lives are filled with thorns. <br> We dressed in holy garments. <br> Yet adorned them with unholy ornaments.</span><button onclick="myFunction()" id="myBtn">Read more</button></h5>
+        
+        <script>
+        function myFunction() {
+          var dots = document.getElementById("dots");
+          var moreText = document.getElementById("more");
+          var btnText = document.getElementById("myBtn");
+        
+          if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more"; 
+            moreText.style.display = "none";
+          } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less"; 
+            moreText.style.display = "inline";
+          }
+        }
+        </script>
+
+<div class="overall">
+    <div class="social-links">
+      <h2>FOLLOW US ON SOCIAL MEDIA</h2>
+      <a href="https://www.facebook.com/abah.emmanuel.7946281"><img src="images/facebook.jpg"></a>
+      <a href="https://www.instagram.com/invites/contact/?i=1rybtbqpz1vjk&utm_content=h8splz9"><img src="images/instagram.jpg"></a>
+      <a href="https://t.me/abahNuel"><img src="images/telegram.png"></a>
+      <a href=""><img src="images/real2-youtube.png"></a>
+    </div>
+       
+  <div class="row">
+    <div class="column">
+      <div class="base1">
+      <h2>Lets get in touch</h2>
+      <hr color="royalblue" size="3">
+      <h5> <img src="images/email.jpg"> abahfortune3@gmail.com</h5><br>
+      <h5> <img src="images/whatsapp.jpg"> Call/WhatsApp: +2349063430166</h5>
+      </div>
+    </div>
+
+
+    <div class="column">
+      <div class="base2">
+        <form action="mailto:" method="get">
+          <label for="name">Your Name</label><br>
+          <input type="text" required><br><br>
+
+          <label for="email">Your Email</label><br>
+          <input type="text" required><br><br>
+
+          <label for="phone-number">Phone Number</label><br>
+          <input type="number"><br><br>
+
+          <label for="message">Your Message(optional)</label><br>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <button type="submit">Submit Comment</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>  
+
+<div class="btp">
+  <a href="https://www.facebook.com/abah.emmanuel.7946281"><img src="images/facebook.jpg"></a>
+  <a href="https://www.instagram.com/invites/contact/?i=1rybtbqpz1vjk&utm_content=h8splz9"><img src="images/instagram.jpg"></a>
+  <a href="https://t.me/abahNuel"><img src="images/telegram.png"></a>
+  <a href="https://youtube.com/channel/UCsFHk2cdEkkt-XPu147pTIA"><img src="images/real2-youtube.png"></a>
+</div>
+
+    <script>
+
+        var menuList = document.getElementById("menuList");
+
+        menuList.style.maxHeight = "0px";
+
+        function togglemenu(){
+            if( menuList.style.maxHeight == "0px")
+                {
+                    menuList.style.maxHeight = "170px";
+                }
+            else    
+                {
+                    menuList.style.maxHeight = "0px";
+                }
+        }
+
+        var slidePosition = 1;
+SlideShow(slidePosition);
+
+function plusSlides(n) {
+SlideShow(slidePosition += n);
+}
+
+function currentSlide(n) {
+SlideShow(slidePosition = n);
+}
+
+function SlideShow(n) {
+var i;
+var slides = document.getElementsByClassName("Containers");
+var circles = document.getElementsByClassName("dots");
+if (n > slides.length) {slidePosition = 1}
+if (n < 1) {slidePosition = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < circles.length; i++) {
+    circles[i].className = circles[i].className.replace(" enable", "");
+}
+slides[slidePosition-1].style.display = "block";
+circles[slidePosition-1].className += " enable";
+} 
+var slidePosition = 0;
+SlideShow();
+
+function SlideShow() {
+var i;
+var slides = document.getElementsByClassName("Containers");
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+slidePosition++;
+if (slidePosition > slides.length) {slidePosition = 1}
+slides[slidePosition-1].style.display = "block";
+setTimeout(SlideShow, 5000);
+} 
+Testing
+    </script>
+</body>
+</html>

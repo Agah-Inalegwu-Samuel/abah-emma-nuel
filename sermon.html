@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       .slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  max-height: 50%;
+}
+.Containers {
+  display: none;
+}
+
+.Back, .forward {
+  cursor: pointer;
+  position: absolute;
+  top: 48%;
+  width: auto;
+  margin-top: -23px;
+  padding: 17px;
+  color: grey;
+  font-weight: bold;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+.forward {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.Back:hover, .forward:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.Info {
+  color: #e3e3e3;
+  font-size: 16px;
+  padding: 10px 14px;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.MessageInfo {
+  color: #f2f2f3;
+  font-size: 14px;
+  padding: 10px 14px;
+  position: absolute;
+  top: 0;
+}
+
+.dots {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #acc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.enable, .dots:hover {
+  background-color: #717161;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+.container{
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #e3e3e3;
+}
+.Containers img{
+  height: 110vh;
+  width: 100%;
+}
+.sermon1{
+   display: block;
+}
+.sermon1 h2{
+    font-family: 'Courier New', Courier, monospace;
+    padding-top: 20px;
+    text-align: center;
+}
+.overall{
+    background-color: white;
+}
+.overall h5{
+    display: block;
+    font-family: Garamond, serif ;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+.sermon1:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column{
+    float: left;
+    width: 50%;
+}
+.column img{
+    height: 70vh;
+  width: 98%;
+  padding-top: 10px;
+}
+.pops{
+    font-size: 120px;
+    letter-spacing: 3px;
+}
+.you-may h3{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    font-family: 'Times New Roman';
+    font-size: 25px;
+}
+.you-may p{
+    margin-left: 20px;
+}
+.optionli p a{
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: blue;
+
+}
+
+
+
+
+
+.socia-link img{
+        height: 25px;
+        margin: 20px;
+        cursor: pointer;
+   }
+   .socia-link{
+       text-align: center;
+       background-color: rgba(1, 1, 19, 0.973);
+       color: white;
+       margin-top: 20px;
+   }
+   .socia-link h5, a{
+       padding-top: 20px;
+       text-decoration: none;
+       color: white;
+   }
+
+
+
+
+@media only screen and (max-width:700px){
+    .sermon1{
+    display: block;
+    text-align: center;
+}
+.column{
+    float: initial;
+    width: 100%;
+}
+.sermon1:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.pops{
+    display: block;
+    font-family: Garamond, serif ;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    letter-spacing: 0px;
+    padding-top: 0;
+}
+.column img{
+    height: 70vh;
+  width: 98%;
+  padding-top: 10px;
+}
+.optionli p a{
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    margin-left: 20px;
+    text-decoration: none;
+    color: blue;
+}
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html"><img src="images/LOGO.jpg" class="logo"></a>
+
+            <h2 class="title1">ABAH EMMA <span>NUEL</span></h2>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="sermon.html">SERMONS</a></li>
+                    <li><a href="e-books.html">E-BOOks</a></li>
+                    <li><a href="biograpy.html">BIOGRAPHY</a></li>
+                    <li><a href="contactus.html">CONTACT-US</a></li>
+                </ul>
+                <h2></h2>
+            </nav>
+            <img src="images/meni-icon.jpg" class="menu-icon" onclick="togglemenu()">
+        </div>
+
+        <div class="heading">
+            <hr color="darkred" size="5">
+            <h2>ABAH EMMA <span>NUEL</span> </h2>
+        </div>
+
+
+        
+        <div class="slideshow-container fade">
+
+            <div class="Containers">
+              <div class="MessageInfo">1 / 3</div>
+              <div class="img"><img src="images/LOGO.jpg"></div>
+            </div>
+          
+            <div class="Containers">
+              <div class="MessageInfo">2 / 3</div>
+              <div class="img"><img src="images/scroll2.jpg"></div>
+            </div>
+          
+            <div class="Containers">
+              <div class="MessageInfo">3 / 3</div>
+              <div class="img"><img src="images/scroll3.jpg"></div>
+            </div>
+          
+            <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+          
+          <div style="text-align:center">
+            <span class="dots" onclick="currentSlide(1)"></span>
+            <span class="dots" onclick="currentSlide(2)"></span>
+            <span class="dots" onclick="currentSlide(3)"></span>
+          </div> 
+
+
+
+
+
+
+
+
+
+<div class="overall">
+
+
+
+
+                    <div class="sermon1">
+                        <h2>THE BODY OF CHRIST</h2><br>
+                    
+                        <h5>Building has many parts, as well as many responsibilities. There are Land Surveyor, Architect, Building Engineer, Bricklayer, Water fetcher, Blocks molders, Carpenter, Painter, Electrician etc who all have their roles to perform to make the building a reality.
+
+                             We all have our roles, and we are all important. All denominations are like different workers on the same building. Different emphasis, we all tend to overrate our own beat and downplay the Assignment of others.</h5>
+                    
+                    
+                            <div class="column">
+                                <img src="images/scroll1.jpg">
+                            </div>
+                    
+                            <div class="column, pops">
+                                <div class="pops">
+                                    <h5>
+                                        God's kingdom is liking to a building. God is the owner, Holy Spirit is the Supervisor, while Jesus is the Sponsor.
+                                        Your church is not the total church of Christ. She's just a part, we all have strength and weaknesses, let's understand our roles and stop working at cross-purposes. The building is only one, and we are all equally hired! The owner expect you to face what you are hired for, not to be another Supervisor. Face your work.
+                                        A friend told me his experience. He hated the preaching of Joyce Meyer so much. " This woman should preach the real gospel. The gospel is about Salvation, Heaven and Hell, Sin, Spirituality, Holiness etc. Why is she always encouraging people? This is fake, it's not the real gospel" anytime he sees Joyce Meyer, he's already offended.
+                                        One day, he had serious life challenges and was at the verge of committing suicide, though a GO of Ministry.
+                                        
+                                        In his depressed state, he stumbled on Joyce Meyer preaching her normal" encouragement gospel" . My friend listened and it's like God himself speaking to him. He was greatly encouraged, motivated and rescued from suicide, by the same message and messenger he had despised for years.
+
+                                        That message you don't need is what someone desperately need. Do your own, and let others do theirs. Everyone is answerable to God.
+                                    
+                                    
+                                    </h5>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                                    <h5>
+                                        
+                                         
+                                    </h5>
+                    
+
+
+
+
+
+
+                                   
+                                    
+                
+
+
+
+
+
+
+
+                                                    
+                        
+
+
+
+                                                                    
+
+                                                    <div class="sermon1">
+                                                        <h2>For this entity called THE FLESH, I write!</h2><br>
+                                                    
+                                                        <h5>
+                                                            Well, <br>
+
+                                                            I've seen dreams crushed, <br>
+                                                            
+                                                            Ordinations relinquished and <br>
+                                                            
+                                                            Passions extinguished as men gracefully strode on the corridor of this ancient enigma. <br>
+                                                            
+                                                            "Flesh", it is called! <br>
+                                                            More poisonous than Leviathan as it subtily creeps into the abode of it's captive, luring him into the depths of Inertial's Mire.
+                                                            
+                                                        </h5>
+
+                                                        <div class="column">
+                                                            <img src="images/fleshy.jpg">
+                                                        </div>
+                                                            
+                                                    
+                                                            <div class="column">
+                                                                <div>
+                                                                    <h5>Ever heard flesh ecbo? <br>
+
+                                                                        It's voice travels into the depth of a weary soul as its only language is PLEASURE! <br>
+                                                                        
+                                                                        Who would have thought that this frail entity would command such influence within the realm of the soul? <br>
+                                                                        
+                                                                        Striping the great of their relevance,
+                                                                        Sapping out virtue from the one who is frail on his kneels,
+                                                                        Quickening fear in the heart of the folly who relegates the Word and thinks he can be intellectual with his God.
+                                                                    
+                                                                        Yes! <br>
+
+                                                                        Mighty are the works of this frail entity who feasts on the ignorance and laziness of it's preys! <br>
+                                                                        ....................................................................... <br>
+                                                                        
+                                                                        So here, against the Works of the flesh, your first step towards securing deliverance is that You are INTENTIONAL ABOUT DYING DAILY! <br>
+                                                                        
+                                                                        REMEMBER!
+                                                                        Dead men don't respond to the outbursts of life because of the cessation of life, so also, your flesh can stop living if you are INTENTIONAL about ceasing it's life! <br>
+                                                                        
+                                                                        ~Vicky John.
+                                                                    </h5>
+                                                                </div>
+                                                                
+                                                            </div>
+                                
+                                                        </div>
+                                                                    <h5>
+                                                                        
+                                                                    </h5>
+                                                    
+                                
+                                            
+
+
+
+                                                                    
+
+                                    <div class="sermon1">
+                                        <h2>READ!</h2><br>
+
+                                        <h5>
+                                            A pastor was struggling to prepare his sermon and <br>
+                                            didn't want to be disturbed by his daughter, so he <br>
+                                            removed a map of the world from his study, tore it <br>
+                                            into pieces and gave it to her to assemble with the <br>
+                                            
+                                        </h5>
+
+                                        <div class="column">
+                                            <img src="images/map.jpg">
+                                        </div>
+                                            
+                                    
+                                            <div class="column">
+                                                <div>
+                                                    <h5>
+                                                        promise that he would answer all her questions <br>
+                                            and play with her when she was done. He knew <br>
+                                            she would never be able to fix it. To his <br>
+                                            amazement, in less than five minutes, she returned <br>
+                                            to him in his study with the map in perfect shape, <br>
+                                            every continent and every country in its place.  <br>
+                                                        The <br>
+                                                        surprised father asked, u don't know anything
+                                                        about geography, so how did u fix the world so
+                                                        easily and quickly? The girl smiled sweetly and
+                                                        replied, ''The picture of JESUS was at back of the
+                                                        map and i knew that if i have JESUS in the right
+                                                        place, the whole world would be in perfect
+                                                        shape''That was just the right inspiration he
+                                                        needed for his sermon. He thanked his daughter
+                                                        and prepared a powerful sermon on the subject Fix
+                                                        your world by placing JESUS at the right place.
+                                                        Just place JESUS in his rightful place and your life
+                                                        will be inorder.I hope you understand this just like I
+                                                        do. spread it to the world, let them know that
+                                                        THEIR WORLD CAN NOT BE COMPLETELY FIXED
+                                                        WITHOUT JESUS.
+                                                    </h5>
+                                                </div>
+                                                
+                                            </div>
+                
+                                        </div>
+                                                    <h5>
+                                                        
+                                                    </h5>
+
+
+
+
+
+
+
+
+
+                                                   
+
+                                                         <div class="sermon1">
+                                                        <h2>FOCUS.</h2><br>
+                
+                                                        <h5>
+                                                            This week don't focus on social media noise. <br>
+                                                            No one post their losses, their abortions, their heartbreaks, their struggles or their debts etc. <br>
+
+                                                            When the page is all clean, it is an edited story. <br>
+                                                            When it is all about another man's story, then they don't want theirs to be heard or blind to their past or present struggles. <br>
+
+                                                            Its fine to present to the world your edited story, that is the way the world is. <br>
+                                                            However be bold to admit your own mistakes, be it past or present, and aim to be the better version of you. <br>
+                                                        </h5>
+                
+                                                    
+                                                            
+                                                    
+                                                            <div class="column">
+                                                                <div>
+                                                                    <h5>Ignore the social media perfection, its scam. <br>
+                                                                        Focus more on process and growth. <br>
+                                                                        
+                                                                        Even this picture was edited. <br>
+                                                                        
+                                                                        #DontKillYourSelf <br>
+                                                                        #CeaseCompetition. <br>
+                                                                        #
+                                                                    </h5>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                           
+                                
+                                                        </div>
+
+
+
+
+
+
+
+
+
+
+                                                        <div class="sermon1">
+                                                            <h2>KINGDOM!</h2><br>
+                    
+                                                            <h5>"...for they did not love and cling to life even when faced with death [holding their lives cheap till they had to die for their witnessing]". [AMP] <br>
+
+                                                                "...They weren't in love with themselves; they were willing to die for Christ." [MSB] <br>
+                                                                
+                                                                "...and they loved not their lives unto the death." [KJV] <br>
+                                                                
+                                                                "...they did not love their lives so much as to shrink from death." [NIV] (Rev. 12:11). <br>
+                                                            </h5>
+                    
+                                                        
+                                                                
+                                                        
+                                                                <div class="column">
+                                                                    <div>
+                                                                        <h5>Joseph, Daniel, and the three Hebrew boys didn’t have pastors in their various places of captivity, but stood for the kingdom even at the expense of their lives. We have a bunch of people today who are churchy, but their jobs, businesses and degrees are more important than their faith in Christ. <br>
+
+                                                                            We have so many politicians who are churchy but can’t represent the kingdom in their Sphere of influence. They will rather chose the portion of the king’s meal than stand for the kingdom. They have a church life and a world life, hypocrites to the core. <br>
+                                                                            If Jesus and His kingdom does not have the highest priority over everything in your life, you have not known Him!! <br>
+                                                                            
+                                                                            We have entered a season in time, when God is putting a difference between those who truly know Him and those doing religion in His name!! <br>
+                                                                            
+                                                                            If you can't die for what you are preaching, then vacate the pulpit on time. <br>
+                                                                             
+                                                                            Selah! <br>
+                                                                            Maranatha!
+                                                                        </h5>
+                                                                    </div>
+                                                                    
+                                                                </div>
+                                                               
+                                    
+                                                            </div>
+                
+                
+                
+
+
+
+
+                                                            <div class="sermon1">
+                                                                <h2>#ABSOLUTE_FOCUS_IN_THESE_TIMES.</h2><br>
+                                                            
+                                                                <h5 class="marry">
+                                                                    - By Abah Emma Nuel
+
+                                                                    Never forget what it means to live, - To live is Christ. All that you are is Christ. To forget this, is to chase after the wind and become vain. Be deliberate about living for christ.
+                                                                    
+                                                                    Never forget how you began, - There's a growing tendency among Christians to suddenly break their spiritual disciplines and routines bcus they heard another man (who had some 'results') say "such and such is not necessary".
+                                                                    
+                                                                </h5>
+        
+                                                            
+                                                                    <div class="column">
+                                                                        <img src="images/focus.jpg">
+                                                                    </div>
+                                                            
+                                                                    <div class="column, pops">
+                                                                        <div class="pops">
+                                                                            <h5> We may all be Christians but everyone of us is unique in certain dealings with God. In spiritual things, it's not everything that's good for the goose that would be good for the gander. Discern yourself and stay with God. 
+
+                                                                                He knows what you need to keep doing so you can become what he has intended for you before you were born. You're not in competition with your brother. You'll not be measured by his performance. RUN your RACE and finish YOUR COURSE.
+                                                                                
+                                                                                Never forget who you met.- Your encounters with God, no matter "how 'little" or "insignificant" they may seem, are proofs that he exists and that you're valuable to him. He showed you those things or gave you those visions as a "bait" to keep you on the path of spiritual progress.
+                                                                                
+                                                                                Never compromise the authority of scriptures.- Remember anything that does not line up with the spirit inspired and spirit breath word is dangerous. 
+                                                                                
+                                                                                Extra biblical and extra scriptural experiences will most likely lead you outside the jurisdiction of God.
+
+                                                                                Love. Love. Love.- keep loving Jesus. Regardless of what happens around you. If nothing can affect your love for him, you'd never break ranks with Him. Keep the flames of his love raging in your heart. Let nothing competes with your love for him. Not even your desire to live. Hmm. Finally;
+
+                                                                                Find your tribe and stay with your company.- You must find and stay with your company. You're not designed to grow in every environment. Find yours and be committed Therein. 
+
+                                                                                Think on these things. What use is it that you began but never finished? <br>
+                                                                                #Ponder <br>
+                                                                                #Focus
+                                                                            </h5>
+                                                                        </div>
+                                                                        
+                                                                    </div>
+                                        
+                                                                </div>
+                                                                            <h5>
+                                                                                
+                                                                            </h5>
+
+
+
+
+
+
+
+                                                                            <div class="sermon1">
+                                                                                <h2>PROGRESSION IN RECESSION!! 🏢🚖🚘😇</h2><br>
+                                                                            
+                                                                                <h5 class="marry">
+                                                                                    I got suspicious when I learned that prophet Elijah was asked to move out of Brook Kidron because it dried up, for it had not rained for a long time.
+
+                                                                                    My studious and inquisitive mind kept saying, "Please tell me another reason". 
+                                                                                    
+                                                                                    
+                                                                                </h5>
+                        
+                                                                            
+                                                                                    <div class="column">
+                                                                                        <img src="images/following-christ.jpg">
+                                                                                    </div>
+                                                                            
+                                                                                    <div class="column, pops">
+                                                                                        <div class="pops">
+                                                                                            <h5>
+                                                                                                They were to prepare their last meal, eat it and die. 
+
+                                                                                                So God made sure that He ran the brook out so Elijah could move to Zarephath to help sustain the lives of the widow and her fatherless son.
+                                                                                                
+                                                                                                From God's language, it looked like Elijah was going to be helped by the widow but in reality it was the widow that was helped to survive the recession by the presence of prophet Elijah.
+                                                                                                
+                                                                                                So my conclusion is, God brought Elijah out from the brook to save lives outside there. Jesus referring to it said, "There were many widows in Israel in the days of Elijah but unto none of them was Elijah sent but to the widow of Zarephath."
+                                                                                                
+                                                                                                Therefore make no boast about how blessed you are in your brook when no one is benefitting in your blessing.
+
+                                                                                                In this time of recession in our nation, please look out through your window of comfort and help a needy neighbour to survive. Don't wait for your Brook to dry up before you make that move.
+                                                                                                
+                                                                                                May God help us to do the right things in Jesus' name.
+                                                                                                
+                                                                                                Amen.
+
+                                                                                                Couldn't God who did that keep the brook springing up for Elijah all through the drought?
+                                                                                    
+                                                                                                I got meditating and came to place my finger on something outstanding. The man of God was surviving the recession while a widow and her son were down to their last meal. 
+                                                                                
+                                                                                                The raven brought Elijah bread and flesh every morning and evening without fail. 
+                                                                                            </h5>
+                                                                                        </div>
+                                                                                        
+                                                                                    </div>
+                                                        
+                                                                                </div>
+                                                                                            <h5>
+                                                                                                
+                                                                                            </h5>
+                
+
+                                                                                                                           
+
+
+
+
+
+
+                                                                            <div class="sermon1">
+                                                                                <h2>RE-AWAKENING!</h2><br>
+                                                                                                        
+                                                                                    <h5>
+                                                                                        While laying emphasis on corporate Christian life, the people’s personal walk with the Lord has increasingly gone on the decline. Church attendance has become the hallmark for a healthy Christian life. You really do wonder why myriads of people gather weekly in buildings and yet God is missing in our streets, neighborhoods and territories.
+
+                                                                                        The light of most believers seems to only shine inside church walls. A different civilization is dominating our schools, political space and every institution. It will amaze you to know the number of believers that don’t have a personal prayer and study life. When you engage them, you discover how shallow and empty many are.
+
+                                                                                        Our corporate life should be an aggregation of who we are individually. Your personal walk with the Lord is more important than your corporate life. It was never Jesus’s desire for the church to become an institutionalized group. We were suppose to be an organic element on earth. Many believers have no life outside church, no walk with the Lord outside corporate duties.
+
+                                                                                         We have entered a season where it shall be all man for himself, it is the God that you know that will sustain you this season, corporate life will be rarely impossible. Only those who know their God shall be strong!
+
+                                                                                        Selah!
+                                                                                        Maranatha
+                                                                                    </h5>
+                                    
+                                                        
+                                                                            </div>
+                                                                        </div>
+</div>
+
+
+                                <div class="you-may">
+                                    <h3>You May Also Want To Read</h3>
+                                    <p>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>></p>
+
+                                </div>
+
+                                    <div class="optionli">
+                                        <p><a href="avoid-distractions.html">AVOID DISTRACTIONS</a></p>
+                                        <p><a href="divine-evidence.html">DIVINE EVIDENCE</a></p>
+                                        <p><a href="true-servanthood.html">TRUE SERVANTHOOD</a></p>
+                                        <p><a href="undercover.html">UNDERCOVER.</a></p>
+                                        <p><a href="the-love-of-christ.html">THE LOVE OF CHRIST</a></p>
+                                        <p><a href="single-sisters.html">Dedicated To Our Single Brothers And Sisters.</a></p>
+                                        <p><a href="read-through.html">I write with so much love and concern! (Read through).</a> </p>
+                                        <p><a href="gospel-of-the-kingdom.html">THE GOSPEL OF THE KINGDOM!</a></p>
+                                    </div>
+                                   
+                                                                                                    
+
+                                    <div class="socia-link"> 
+                                        <h5>Follow Us On</h5>
+                                        <a href="https://www.facebook.com/abah.emmanuel.7946281"><img src="images/facebook.jpg"></a>
+                                        <a href="https://www.instagram.com/invites/contact/?i=1rybtbqpz1vjk&utm_content=h8splz9"><img src="images/instagram.jpg"></a>
+                                        <a href="https://t.me/abahNuel"><img src="images/telegram.png"></a>
+                                        <a href="https://youtube.com/channel/UCsFHk2cdEkkt-XPu147pTIA"><img src="images/real2-youtube.png"></a>
+                                    </div>
+                                    
+
+
+<script>
+     var menuList = document.getElementById("menuList");
+
+menuList.style.maxHeight = "0px";
+
+function togglemenu(){
+    if( menuList.style.maxHeight == "0px")
+        {
+            menuList.style.maxHeight = "170px";
+        }
+    else    
+        {
+            menuList.style.maxHeight = "0px";
+        }
+}
+
+
+
+var slidePosition = 1;
+SlideShow(slidePosition);
+
+function plusSlides(n) {
+SlideShow(slidePosition += n);
+}
+
+function currentSlide(n) {
+SlideShow(slidePosition = n);
+}
+
+function SlideShow(n) {
+var i;
+var slides = document.getElementsByClassName("Containers");
+var circles = document.getElementsByClassName("dots");
+if (n > slides.length) {slidePosition = 1}
+if (n < 1) {slidePosition = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < circles.length; i++) {
+    circles[i].className = circles[i].className.replace(" enable", "");
+}
+slides[slidePosition-1].style.display = "block";
+circles[slidePosition-1].className += " enable";
+} 
+var slidePosition = 0;
+SlideShow();
+
+function SlideShow() {
+var i;
+var slides = document.getElementsByClassName("Containers");
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+slidePosition++;
+if (slidePosition > slides.length) {slidePosition = 1}
+slides[slidePosition-1].style.display = "block";
+setTimeout(SlideShow, 5000);
+} 
+Testing
+</script>
+
+
+
+</body>
+</html>

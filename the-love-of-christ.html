@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <style>
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            max-height: 50%;
+          }
+          .Containers {
+            display: none;
+          }
+          
+          .Back, .forward {
+            cursor: pointer;
+            position: absolute;
+            top: 48%;
+            width: auto;
+            margin-top: -23px;
+            padding: 17px;
+            color: grey;
+            font-weight: bold;
+            font-size: 19px;
+            transition: 0.4s ease;
+            border-radius: 0 5px 5px 0;
+            user-select: none;
+          }
+          
+          .forward {
+            right: 0;
+            border-radius: 4px 0 0 4px;
+          }
+          
+          .Back:hover, .forward:hover {
+            background-color: rgba(0,0,0,0.8);
+          }
+          
+          .Info {
+            color: #e3e3e3;
+            font-size: 16px;
+            padding: 10px 14px;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+          }
+          
+          .MessageInfo {
+            color: #f2f2f3;
+            font-size: 14px;
+            padding: 10px 14px;
+            position: absolute;
+            top: 0;
+          }
+          
+          .dots {
+            cursor: pointer;
+            height: 16px;
+            width: 16px;
+            margin: 0 3px;
+            background-color: #acc;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.5s ease;
+          }
+          
+          .enable, .dots:hover {
+            background-color: #717161;
+          }
+          
+          .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.4s;
+            animation-name: fade;
+            animation-duration: 1.4s;
+          }
+          
+          @-webkit-keyframes fade {
+            from {opacity: .5}
+            to {opacity: 2}
+          }
+          
+          @keyframes fade {
+            from {opacity: .5}
+            to {opacity: 2}
+          }
+          .container{
+              width: 100%;
+              min-height: 100%;
+              box-sizing: border-box;
+              overflow: hidden;
+              background-color: #e3e3e3;
+          }
+          .Containers img{
+            height: 110vh;
+            width: 100%;
+          }
+          .sermon1{
+             display: block;
+             background-color: white;
+             /* text-align: center; */
+          }
+          .sermon1 h2{
+              font-family: 'Courier New', Courier, monospace;
+              padding-top: 20px;
+              text-align: center;
+          }
+          .sermon1 h5{
+              display: block;
+              font-family: Garamond, serif ;
+              font-size: 20px;
+              margin-bottom: 20px;
+              margin-left: 10px;
+              margin-right: 10px;
+          
+          }
+          .sermon1:after{
+              content: "";
+              display: table;
+              clear: both;
+          }
+          .column{
+              float: left;
+              width: 50%;
+          }
+          .column img{
+              height: 70vh;
+            width: 98%;
+            padding-top: 10px;
+          }
+          .pops{
+              font-size: 60px;
+              letter-spacing: 3px;
+          }
+          .marry{
+              padding-left: 50px;
+
+          }
+          .pops2{
+            display: block;
+              font-family: Garamond, serif ;
+              font-size: 20px;
+              margin-bottom: 20px;
+              margin-left: 10px;
+              margin-right: 10px;
+              letter-spacing: 0px;
+              padding-top: 0;
+          }
+
+
+
+          .socia-link img{
+        height: 25px;
+        margin: 20px;
+        cursor: pointer;
+   }
+   .socia-link{
+       text-align: center;
+       background-color: rgba(1, 1, 19, 0.973);
+       color: white;
+       margin-top: 20px;
+   }
+   .socia-link h5, a{
+       padding-top: 20px;
+       text-decoration: none;
+       color: white;
+   }
+
+
+
+          @media only screen and (max-width:700px){
+              .sermon1{
+              display: block;
+              text-align: center;
+          }
+          .column{
+              float: initial;
+              width: 100%;
+          }
+          .sermon1:after{
+              content: "";
+              display: table;
+              clear: both;
+          }
+          .pops{
+              display: block;
+              font-family: Garamond, serif ;
+              font-size: 20px;
+              margin-bottom: 20px;
+              margin-left: 10px;
+              margin-right: 10px;
+              letter-spacing: 0px;
+              padding-top: 0;
+          }
+          .pops2{
+              display: block;
+              font-family: Garamond, serif ;
+              font-size: 20px;
+              margin-bottom: 20px;
+              margin-left: 10px;
+              margin-right: 10px;
+              letter-spacing: 0px;
+              padding-top: 0;
+          }
+    
+          .column img{
+              height: 70vh;
+            width: 98%;
+            padding-top: 10px;
+          }
+          
+          }
+              </style>
+
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html"><img src="images/LOGO.jpg" class="logo"></a>
+
+            <h2 class="title1">ABAH EMMA <span>NUEL</span></h2>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="sermon.html">SERMONS</a></li>
+                    <li><a href="article.html">ARTICLE</a></li>
+                    <li><a href="e-books.html">E-BOOks</a></li>
+                    <li><a href="biograpy.html">BIOGRAPHY</a></li>
+                    <li><a href="contactus.html">CONTACT-US</a></li>
+                </ul>
+                <h2></h2>
+            </nav>
+            <img src="images/meni-icon.jpg" class="menu-icon" onclick="togglemenu()">
+        </div>
+
+        <div class="heading">
+            <hr color="darkred" size="5">
+            <h2>ABAH EMMA <span>NUEL</span> </h2>
+        </div>
+
+
+
+
+
+
+        <div class="sermon1">
+            <h2>THE LOVE OF CHRIST</h2><br>
+        
+            <h5>
+                Oh motives! <br> Genuinety! <br> Purity of Intentions! <br>
+
+                Jesus exemplified Love in its true and pure form, generosity, equality, service and loyalty.
+                He dined and even served the very outcast.
+                He invited them into his own banquet. There was never a time that he paid more attention to anyone above the other.
+
+
+                
+            </h5>
+
+        
+                <div class="column">
+                    <img src="images/love-of-christ.jpg">
+                </div>
+        
+                <div class="column, pops">
+                    <div class="pops">
+                        <h5>There was never a time that he paid more attention to the fortunate above the less privileged.
+
+                            There was never a time that he honored the famous and despised the lonely. 
+                            
+                            He simply lived for everyone!
+                            We can become... More like these.
+                            
+                            Funny enough, this lifestyle of Jesus is fast eroding today.
+                            
+                            If you can't affiliate with others while they are yet small and be a part of their growth process with genuineness in your heart, you have no business being a company while they become great!
+                            
+                            Our 'Why' is as important as our 'What' all the time.
+
+                            There was never a time that he paid more attention to the healthy above the sick
+
+                            There was never a time he paid more attention to the greatest giver than the mite giver.
+                            There' was never a point in time that he paid more attention to one status above the other.
+
+                            Jesus hates hypocrisy. This is the sole reason Jesus would tell some people "Get away from me, I know you not" on the last day. 
+
+                            Let your preaching match your living. The same energy used in preaching it should be Channeled to doing and living it... 
+
+                            I do hope these dots connect though... <br>
+                            #Blessings.
+                        </h5>
+                    </div>
+                    
+                </div>
+
+            </div>
+                        <h5>
+                           
+                        </h5>
+
+
+
+
+                        <div class="socia-link"> 
+                          <h5>Follow Us On</h5>
+                          <a href="https://www.facebook.com/abah.emmanuel.7946281"><img src="images/facebook.jpg"></a>
+                          <a href="https://www.instagram.com/invites/contact/?i=1rybtbqpz1vjk&utm_content=h8splz9"><img src="images/instagram.jpg"></a>
+                          <a href="https://t.me/abahNuel"><img src="images/telegram.png"></a>
+                          <a href="https://youtube.com/channel/UCsFHk2cdEkkt-XPu147pTIA"><img src="images/real2-youtube.png"></a>
+                        </div>
+
+
+
+
+<script>
+     var menuList = document.getElementById("menuList");
+
+menuList.style.maxHeight = "0px";
+
+function togglemenu(){
+    if( menuList.style.maxHeight == "0px")
+        {
+            menuList.style.maxHeight = "170px";
+        }
+    else    
+        {
+            menuList.style.maxHeight = "0px";
+        }
+}
+</script>
+
+
+
+</body>
+</html>

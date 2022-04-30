@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <style>
+        .slideshow-container {
+            max-width: 100%;
+            position: relative;
+            margin: auto;
+            max-height: 50%;
+          }
+          .Containers {
+            display: none;
+          }
+          
+          .Back, .forward {
+            cursor: pointer;
+            position: absolute;
+            top: 48%;
+            width: auto;
+            margin-top: -23px;
+            padding: 17px;
+            color: grey;
+            font-weight: bold;
+            font-size: 19px;
+            transition: 0.4s ease;
+            border-radius: 0 5px 5px 0;
+            user-select: none;
+          }
+          
+          .forward {
+            right: 0;
+            border-radius: 4px 0 0 4px;
+          }
+          
+          .Back:hover, .forward:hover {
+            background-color: rgba(0,0,0,0.8);
+          }
+          
+          .Info {
+            color: #e3e3e3;
+            font-size: 16px;
+            padding: 10px 14px;
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+          }
+          
+          .MessageInfo {
+            color: #f2f2f3;
+            font-size: 14px;
+            padding: 10px 14px;
+            position: absolute;
+            top: 0;
+          }
+          
+          .dots {
+            cursor: pointer;
+            height: 16px;
+            width: 16px;
+            margin: 0 3px;
+            background-color: #acc;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.5s ease;
+          }
+          
+          .enable, .dots:hover {
+            background-color: #717161;
+          }
+          
+          .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.4s;
+            animation-name: fade;
+            animation-duration: 1.4s;
+          }
+          
+          @-webkit-keyframes fade {
+            from {opacity: .5}
+            to {opacity: 2}
+          }
+          
+          @keyframes fade {
+            from {opacity: .5}
+            to {opacity: 2}
+          }
+          .container{
+              width: 100%;
+              min-height: 100%;
+              box-sizing: border-box;
+              overflow: hidden;
+              background-color: #e3e3e3;
+          }
+          .Containers img{
+            height: 110vh;
+            width: 100%;
+          }
+          .sermon1{
+             display: block;
+             background-color: white;
+             /* text-align: center; */
+          }
+          .sermon1 h2{
+              font-family: 'Courier New', Courier, monospace;
+              padding-top: 20px;
+              text-align: center;
+          }
+          .sermon1 h5{
+              display: block;
+              font-family: Garamond, serif ;
+              font-size: 20px;
+              margin-bottom: 20px;
+              margin-left: 10px;
+              margin-right: 10px;
+          
+          }
+          .sermon1:after{
+              content: "";
+              display: table;
+              clear: both;
+          }
+          .column{
+              float: left;
+              width: 50%;
+          }
+          .column img{
+              height: 70vh;
+            width: 98%;
+            padding-top: 10px;
+          }
+          .pops{
+              font-size: 60px;
+              letter-spacing: 3px;
+          }
+          .marry{
+              padding-left: 50px;
+
+          }
+          .pops2{
+            display: block;
+              font-family: Garamond, serif ;
+              font-size: 20px;
+              margin-bottom: 20px;
+              margin-left: 10px;
+              margin-right: 10px;
+              letter-spacing: 0px;
+              padding-top: 0;
+          }
+
+
+          .socia-link img{
+        height: 25px;
+        margin: 20px;
+        cursor: pointer;
+   }
+   .socia-link{
+       text-align: center;
+       background-color: rgba(1, 1, 19, 0.973);
+       color: white;
+       margin-top: 20px;
+   }
+   .socia-link h5, a{
+       padding-top: 20px;
+       text-decoration: none;
+       color: white;
+   }
+
+
+          @media only screen and (max-width:700px){
+              .sermon1{
+              display: block;
+              text-align: center;
+          }
+          .column{
+              float: initial;
+              width: 100%;
+          }
+          .sermon1:after{
+              content: "";
+              display: table;
+              clear: both;
+          }
+          .pops{
+              display: block;
+              font-family: Garamond, serif ;
+              font-size: 20px;
+              margin-bottom: 20px;
+              margin-left: 10px;
+              margin-right: 10px;
+              letter-spacing: 0px;
+              padding-top: 0;
+          }
+          .pops2{
+              display: block;
+              font-family: Garamond, serif ;
+              font-size: 20px;
+              margin-bottom: 20px;
+              margin-left: 10px;
+              margin-right: 10px;
+              letter-spacing: 0px;
+              padding-top: 0;
+          }
+    
+          .column img{
+              height: 70vh;
+            width: 98%;
+            padding-top: 10px;
+          }
+          
+          }
+              </style>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html"><img src="images/LOGO.jpg" class="logo"></a>
+
+            <h2 class="title1">ABAH EMMA <span>NUEL</span></h2>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="sermon.html">SERMONS</a></li>
+                    <li><a href="article.html">ARTICLE</a></li>
+                    <li><a href="e-books.html">E-BOOks</a></li>
+                    <li><a href="biograpy.html">BIOGRAPHY</a></li>
+                    <li><a href="contactus.html">CONTACT-US</a></li>
+                </ul>
+                <h2></h2>
+            </nav>
+            <img src="images/meni-icon.jpg" class="menu-icon" onclick="togglemenu()">
+        </div>
+
+        <div class="heading">
+            <hr color="darkred" size="5">
+            <h2>ABAH EMMA <span>NUEL</span> </h2>
+        </div>
+
+
+    
+
+
+
+
+        <div class="sermon1">
+            <h2>THE GOSPEL OF THE KINGDOM!</h2><br>
+        
+            <h5 class="marry">
+                Your gift does not validate your message. “You can read that again!”
+
+                The problem we have in Africa is that we are easily swayed and beguiled. 
+                
+            </h5>
+
+        
+                <div class="column">
+                    <img src="images/scroll3.jpg">
+                </div>
+        
+                <div class="column, pops">
+                    <div class="pops">
+                        <h5>
+                            So, we have a set of gifted persons who are using their gift to sell a strange Gospel to the people.
+
+                            We are not all daft or spiritually premature. We are only moved by a gift used in the right context, that is, a gift used to promote the kingdom and exalt Jesus. 
+                            
+                            We have too many samsons. Gifted but doing their own business with the gift of God.
+                            
+                            It does not matter if you can prophesy fire or cause wonders to appear in the sky (these are all good), but at the backdrop of all of that, what is the TEXTURE of the message you are promoting with those signs and wonders!
+                                                            
+                            Many don’t bother about the message as long as the messenger is gifted. 
+
+                            A REMNANT is rising that will not be swayed by drama, if what you are promoting with your gift is not scriptural and Kingdom proved, forget it, we won’t take you serious!!
+
+                            A Generation of Truth and Power rises!! 
+
+                            <br>
+                            Selah!! <br>
+                            Maranatha!!
+
+                        </h5>
+                    </div>
+                    
+                </div>
+
+            </div>
+                        <h5>
+
+                           
+                        </h5>
+
+
+
+
+                        <div class="socia-link"> 
+                            <h5>Follow Us On</h5>
+                            <a href="https://www.facebook.com/abah.emmanuel.7946281"><img src="images/facebook.jpg"></a>
+                            <a href="https://www.instagram.com/invites/contact/?i=1rybtbqpz1vjk&utm_content=h8splz9"><img src="images/instagram.jpg"></a>
+                            <a href="https://t.me/abahNuel"><img src="images/telegram.png"></a>
+                            <a href="https://youtube.com/channel/UCsFHk2cdEkkt-XPu147pTIA"><img src="images/real2-youtube.png"></a>
+                        </div>
+
+
+
+
+
+
+
+        <style>
+            .containersss{
+                --sidebar-width: 150px;
+            }
+            .main{
+                display: flex;
+            }
+            .sidebarsss{
+                position: fixed;
+                overflow-y: auto;
+                height: 100%;
+                width: var(--sidebar-width);
+            }
+            .contentsss{
+                margin-left: var(--sidebar-width);
+                flex-grow: 1;
+            }
+        </style>
+
+
+<script>
+     var menuList = document.getElementById("menuList");
+
+menuList.style.maxHeight = "0px";
+
+function togglemenu(){
+    if( menuList.style.maxHeight == "0px")
+        {
+            menuList.style.maxHeight = "170px";
+        }
+    else    
+        {
+            menuList.style.maxHeight = "0px";
+        }
+}
+</script>
+
+
+
+</body>
+</html>

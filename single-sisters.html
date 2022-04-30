@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    .slideshow-container {
+        max-width: 100%;
+        position: relative;
+        margin: auto;
+        max-height: 50%;
+      }
+      .Containers {
+        display: none;
+      }
+      
+      .Back, .forward {
+        cursor: pointer;
+        position: absolute;
+        top: 48%;
+        width: auto;
+        margin-top: -23px;
+        padding: 17px;
+        color: grey;
+        font-weight: bold;
+        font-size: 19px;
+        transition: 0.4s ease;
+        border-radius: 0 5px 5px 0;
+        user-select: none;
+      }
+      
+      .forward {
+        right: 0;
+        border-radius: 4px 0 0 4px;
+      }
+      
+      .Back:hover, .forward:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+      
+      .Info {
+        color: #e3e3e3;
+        font-size: 16px;
+        padding: 10px 14px;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+      }
+      
+      .MessageInfo {
+        color: #f2f2f3;
+        font-size: 14px;
+        padding: 10px 14px;
+        position: absolute;
+        top: 0;
+      }
+      
+      .dots {
+        cursor: pointer;
+        height: 16px;
+        width: 16px;
+        margin: 0 3px;
+        background-color: #acc;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.5s ease;
+      }
+      
+      .enable, .dots:hover {
+        background-color: #717161;
+      }
+      
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.4s;
+        animation-name: fade;
+        animation-duration: 1.4s;
+      }
+      
+      @-webkit-keyframes fade {
+        from {opacity: .5}
+        to {opacity: 2}
+      }
+      
+      @keyframes fade {
+        from {opacity: .5}
+        to {opacity: 2}
+      }
+      .container{
+          width: 100%;
+          min-height: 100%;
+          box-sizing: border-box;
+          overflow: hidden;
+          background-color: #e3e3e3;
+      }
+      .Containers img{
+        height: 110vh;
+        width: 100%;
+      }
+      .sermon1{
+         display: block;
+         background-color: white;
+      }
+      .sermon1 h2{
+          font-family: 'Courier New', Courier, monospace;
+          padding-top: 20px;
+          text-align: center;
+      }
+      .sermon1 h5{
+          display: block;
+          font-family: Garamond, serif ;
+          font-size: 20px;
+          margin-bottom: 20px;
+          margin-left: 10px;
+          margin-right: 10px;
+      
+      }
+      .sermon1:after{
+          content: "";
+          display: table;
+          clear: both;
+      }
+      .column{
+          float: left;
+          width: 50%;
+      }
+      .column img{
+          height: 70vh;
+        width: 98%;
+        padding-top: 10px;
+      }
+      .pops{
+          font-size: 25px;
+      }
+      .marry{
+          padding-left: 50px;
+      }
+      .pops2{
+        display: block;
+          font-family: Garamond, serif ;
+          font-size: 20px;
+          margin-bottom: 20px;
+          margin-left: 10px;
+          margin-right: 10px;
+      }
+      .ab{
+        background-color: white;
+      }
+
+
+      .socia-link img{
+        height: 25px;
+        margin: 20px;
+        cursor: pointer;
+   }
+   .socia-link{
+       text-align: center;
+       background-color: rgba(1, 1, 19, 0.973);
+       color: white;
+       margin-top: 20px;
+   }
+   .socia-link h5, a{
+       padding-top: 20px;
+       text-decoration: none;
+       color: white;
+   }
+
+
+      @media only screen and (max-width:700px){
+          .sermon1{
+          display: block;
+          text-align: center;
+      }
+      .column{
+          float: initial;
+          width: 100%;
+      }
+      .sermon1:after{
+          content: "";
+          display: table;
+          clear: both;
+      }
+      .pops{
+          display: block;
+          font-family: Garamond, serif ;
+          font-size: 20px;
+          margin-bottom: 20px;
+          margin-left: 10px;
+          margin-right: 10px;
+          padding-top: 0;
+      }
+      .pops2{
+          display: block;
+          font-family: Garamond, serif ;
+          font-size: 20px;
+          margin-bottom: 20px;
+          margin-left: 10px;
+          margin-right: 10px;
+          letter-spacing: 0px;
+          padding-top: 0;
+      }
+
+      .column img{
+          height: 70vh;
+        width: 98%;
+        padding-top: 10px;
+      }
+      
+      }
+          </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html"><img src="images/LOGO.jpg" class="logo"></a>
+
+            <h2 class="title1">ABAH EMMA <span>NUEL</span></h2>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="sermon.html">SERMONS</a></li>
+                    <li><a href="article.html">ARTICLE</a></li>
+                    <li><a href="e-books.html">E-BOOks</a></li>
+                    <li><a href="biograpy.html">BIOGRAPHY</a></li>
+                    <li><a href="contactus.html">CONTACT-US</a></li>
+                </ul>
+                <h2></h2>
+            </nav>
+            <img src="images/meni-icon.jpg" class="menu-icon" onclick="togglemenu()">
+        </div>
+
+        <div class="heading">
+            <hr color="darkred" size="5">
+            <h2>ABAH EMMA <span>NUEL</span> </h2>
+        </div>
+
+        <div class="ab">
+
+
+        <div class="sermon1">
+            <h2>DEDICATED TO OUR SINGLE BROTHERS AND SISTERS. </h2><br>
+        
+            <h5 class="marry">
+                Some marry money! <br>
+                Some marry charisma! <br>
+                Some marry beauty! <br>
+                Some marry security! <br>
+                Some marry anointing! <br>
+                Some marry influence! <br>
+                Some marry social security! <br>
+                Some marry history! <br>
+                Some marry luxury! <br>
+                
+            </h5>
+
+        
+                <div class="column">
+                    <img src="images/ladies.jpg">
+                </div>
+        
+                <div class="column, pops">
+                    <div class="pops">
+                        <h5>No wonder many are regretting after getting in and discovering that marriage is beyond money, charisma, beauty, security,anointing, influence etc…
+
+                            Festus taught Anita was so beautiful not knowing that Anita was an emblem of an uncultured lady. Festus gushes over her beauty in public and endure her impropriety in secret. He seems like a champion amidst his peers for marrying a beauty goddess but if only they knew he is living with a vulture at home… THE DECEITFULNESS OF BEAUTY!
+                            Sister Favor didn’t think twice before accepting the proposal of Pastor David. She is blown away by his dexterity and brilliance on the pulpit. Pastor David is a heavily anointed minister who has become the talk of the town.
+                            His ministrations are heavily corrosive. Little is known of his private life. Sister favor didn’t bother to look beyond the champion on the pulpit.
+                            If only she knew the heavily anointed Pastor David had no anointing for his temperament.
+                            She has become a sparring partner in marriage.
+
+                            ANY MARRIAGE BUILT ON CHARACTERISTICS RATHER THAN CHARACTER WILL FAIL. DON’T MARRY ATTRIBUTES, MARRY ATTITUDE. ~Nuel. 
+                            
+                            Money is not enough to decide who you marry, who is the person hiding under money??
+
+                            Anointing is not enough, who is the person hiding under the anointing? Beauty is not enough, who is the person hiding under beauty?? Charisma is not enough, who is the person hiding under that square shoulders.
+
+                            You are not marrying some part of a person, you are marrying the sum total of who that person is. 
+
+                            Take caution, take time and don’t be enamored by that which only your eyes can see!!
+
+                            Your brother; <br>
+                            ©Abah Emma Nuel
+                            
+                        </h5>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        
+            </div>
+
+
+
+
+
+
+            <div class="socia-link"> 
+              <h5>Follow Us On</h5>
+              <a href="https://www.facebook.com/abah.emmanuel.7946281"><img src="images/facebook.jpg"></a>
+              <a href="https://www.instagram.com/invites/contact/?i=1rybtbqpz1vjk&utm_content=h8splz9"><img src="images/instagram.jpg"></a>
+              <a href="https://t.me/abahNuel"><img src="images/telegram.png"></a>
+              <a href="https://youtube.com/channel/UCsFHk2cdEkkt-XPu147pTIA"><img src="images/real2-youtube.png"></a>
+            </div>
+
+
+
+
+
+
+<script>
+     var menuList = document.getElementById("menuList");
+
+menuList.style.maxHeight = "0px";
+
+function togglemenu(){
+    if( menuList.style.maxHeight == "0px")
+        {
+            menuList.style.maxHeight = "170px";
+        }
+    else    
+        {
+            menuList.style.maxHeight = "0px";
+        }
+}
+</script>
+
+
+
+</body>
+</html>
