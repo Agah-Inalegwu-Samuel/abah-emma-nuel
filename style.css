@@ -576,7 +576,7 @@ button{
     border-radius: 5px;
     border: none;
     background: white;
-    color: white;
+    color: black;
     margin-left: 7%;
 }
 .base2 input:focus{
