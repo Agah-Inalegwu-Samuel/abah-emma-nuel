@@ -211,7 +211,7 @@ hr{
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    margin-left: 300px;
+    margin-left: 370px;
 }
 .btn span{
     background: #acb461;
@@ -474,7 +474,7 @@ button{
         cursor: pointer;
         position: relative;
         overflow: hidden;
-        margin-left: 50%;
+        margin-left: 30%;
     }
     .try{
         color: #e3e3e3;
