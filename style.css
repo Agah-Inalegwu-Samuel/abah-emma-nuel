@@ -7,7 +7,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    height: 70px;
+    height: 63px;
     margin-top: 5px;
     margin-bottom: 5px;
     position: static;
@@ -16,7 +16,7 @@
 .logo{
     width: 79px;
     cursor: pointer;
-    margin: 30px 0;
+    /* margin: 10px 0; */
     margin-left: 15px;
     border-radius: 50%;
 
@@ -63,6 +63,17 @@ nav ul li a:hover{
 }
 .heading span{
     color: rgb(104, 1, 1);
+}
+.media-plus h5{
+    display: none;
+}
+.heading h5{
+    display: block;
+    color: darkred;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 10px;
+    font-family: 'Times New Roman';
 }
 .wallpaper{
     max-width: 100%;
@@ -406,6 +417,9 @@ button{
     margin: 30px;
     cursor: pointer;
 }
+.media-plus{
+    display: hidden;
+}
 
 
 
@@ -634,6 +648,17 @@ button{
     margin: 20px;
     cursor: pointer;
 }
-    
-    
+   
+.media-plus h5{
+    display: block;
+    color: darkred;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 14px;
+    font-family: 'Times New Roman';
+    }
+.heading h5{
+    display: none;
+}
+
 }
